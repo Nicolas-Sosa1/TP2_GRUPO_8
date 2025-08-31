@@ -97,10 +97,17 @@ public class Persona {
 					", email=" + email + "]";
 		}
 		
-		
-		
-
-		
-
+		public static void exVerificarDNI (String dni) { 
+			if (dni.length() != 8) {
+				throw new ExVerificarDNI(); 
+				} 
+			
+			for (int i = 0; i < dni.length(); i++) { 
+				if (!Character.isDigit(dni.charAt(i))) { 
+					throw new ExVerificarDNI(); 
+					
+					} 
+				} 
+			}
 }
 
