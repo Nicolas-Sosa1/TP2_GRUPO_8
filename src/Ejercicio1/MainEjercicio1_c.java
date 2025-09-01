@@ -1,4 +1,4 @@
-package EJERCICIO1;
+package Ejercicio1;
 
 import java.time.LocalDate;
 import java.util.Iterator;
