@@ -1,7 +1,8 @@
 package Ejercicio1;
 import java.time.LocalDate;
+import java.util.Objects;
 
-public class Empleado extends Persona {
+public class Empleado extends Persona  {
 
 // atributos
 	private final int legajo;
@@ -13,6 +14,8 @@ public class Empleado extends Persona {
 	public static int devuelveProximoLegajo() {
 		return ultimoLegajo +1;
 	}
+	
+
 	
 //getters and setters
 
@@ -50,7 +53,26 @@ public class Empleado extends Persona {
 		return super.toString() +
 				"Empleado [legajo=" + legajo + ", puesto=" + puesto + "]";
 	}
-		
-
 	
+		
+	//METODO hashCode
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(legajo);
+	}
+	
+	//METODO equals
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Empleado other = (Empleado) obj;
+		return Objects.equals(legajo, other.legajo);
+	}
 }

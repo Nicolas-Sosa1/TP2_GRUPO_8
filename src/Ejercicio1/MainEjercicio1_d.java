@@ -24,7 +24,7 @@ public class MainEjercicio1_d {
         }
         System.out.println("Total (sin duplicados): " + personas.size());
 		
-
+        
 	}
 
 }

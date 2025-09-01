@@ -99,7 +99,7 @@ public class Persona {
 		}
 		
 		public static void exVerificarDNI (String dni) { 
-			if (dni.length() != 8) {
+			if (dni == null || dni.length() != 8) {
 				throw new ExVerificarDNI(); 
 				} 
 			

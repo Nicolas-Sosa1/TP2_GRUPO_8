@@ -3,6 +3,8 @@ package Ejercicio1;
 import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.TreeSet;
+import java.util.Comparator;
+
 
 public class MainEjercicio1_c {
 
@@ -43,15 +45,23 @@ public class MainEjercicio1_c {
 		            "Rivadavia 2100, CABA", "11-4333-1122",
 		            "sofia.rojas@empresa.com", "Líder de Proyecto"
 		   );
+		// DNI duplicado para probar Treeset
+		   Empleado emp6 = new Empleado(
+		            "21456789", "Sofía", "Rojas",
+		            LocalDate.of(1986, 12, 3), "Femenino",
+		            "Rivadavia 2100, CABA", "11-4333-1122",
+		            "sofia.rojas@empresa.com", "Líder de Proyecto"
+		   );
 		   
 		   // Guardar empleados en TreeSet
-		   TreeSet<Empleado> listaEmpleados = new TreeSet<Empleado>();
+	       TreeSet<Empleado> listaEmpleados = new TreeSet<>(Comparator.comparing(Empleado::getDni));
 		   
 		   listaEmpleados.add(emp1);
 		   listaEmpleados.add(emp2);
 		   listaEmpleados.add(emp3);
 		   listaEmpleados.add(emp4);
 		   listaEmpleados.add(emp5);
+		   listaEmpleados.add(emp6);
 		   
 		   // Mostrar info con Iterator
 		   Iterator<Empleado> it = listaEmpleados.iterator();
