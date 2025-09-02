@@ -1,4 +1,4 @@
-package EJERCICIO2;
+package Ejercicio2;
 
 public interface IEdificio {
 	public double getSuperficieEdificio();
