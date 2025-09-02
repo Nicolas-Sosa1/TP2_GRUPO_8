@@ -54,7 +54,7 @@ public class MainEjercicio1_c {
 		   );
 		   
 		   // Guardar empleados en TreeSet
-		   TreeSet<Empleado> listaEmpleados = new TreeSet<Empleado>();
+	       TreeSet<Empleado> listaEmpleados = new TreeSet<>(Comparator.comparing(Empleado::getDni));
 		   
 		   listaEmpleados.add(emp1);
 		   listaEmpleados.add(emp2);
