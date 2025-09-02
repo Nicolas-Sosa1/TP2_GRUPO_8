@@ -38,5 +38,20 @@ public class Polideportivo implements IInstalacionDeportiva, IEdificio{
     public void setTipoDeInstalacion(int tipo) { 
     	this.tipoDeInstalacion = tipo; 
     	}
+    
+    
+    
+	@Override public int getTipoDeInstalacion() { return tipoDeInstalacion; }
+	@Override public double getSuperficieEdificio() { return superficie; }
 	
+	
+	//metodo toString
+
+	@Override
+	public String toString() {
+		return "Polideportivo{nombre=" + nombre + ", superficie=" + superficie + ", tipo=" + tipoDeInstalacion + "}";
+	}
+	
+    
+
 }
