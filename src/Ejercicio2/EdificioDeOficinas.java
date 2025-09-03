@@ -18,5 +18,10 @@ public class EdificioDeOficinas implements IEdificio{
 
 	@Override public double getSuperficieEdificio() { return superficie; }
 
+	@Override
+	public String toString() {
+		return "EdificioDeOficinas [numeroOficinas=" + oficinas + ", superficie=" + superficie + "]";
+	}
+	
 
 }
