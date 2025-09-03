@@ -10,11 +10,13 @@ public class EdificioDeOficinas implements IEdificio{
 		this.oficinas = 1;
 	}
 	
+	
 	public EdificioDeOficinas(double Superficie, int Oficinas) {
 		this.superficie = Superficie;
 		this.oficinas = Oficinas;
 	}
 
 	@Override public double getSuperficieEdificio() { return superficie; }
+
 
 }
